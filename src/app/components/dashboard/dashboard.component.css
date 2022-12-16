@@ -1,0 +1,31 @@
+.icon-rtl {
+  padding-right: 25px;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat right;
+  background-size: 20px;
+}
+
+.top{
+color: red;
+border-radius: 0;
+border: 1px solid red;
+}
+
+.top:visited{
+
+background-color: red;
+color: white;
+}
+.top:focus{
+color: white;
+background-color: red;
+}
+ul{
+ padding: 20px;
+ justify-content: space-around;
+}
+
+
+ul a:focus{
+text-decoration: underline;
+color: red;
+}

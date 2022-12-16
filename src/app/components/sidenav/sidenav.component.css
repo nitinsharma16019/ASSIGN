@@ -1,0 +1,34 @@
+.sidenav{
+    background-color: red;
+    max-height: 700px;
+}
+.profile-circle{
+    background-color: black;
+    width: 10px;
+    height: 20px;
+}
+.menu ul li{
+    padding: 10px;
+}
+.menu ul li a i{
+    margin-left: -20px;
+}
+.menu ul li a{
+    color: wheat;
+}
+.menu ul li a:active{
+    color: white;
+}
+.designation{
+    padding-left: 40px;
+}
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }

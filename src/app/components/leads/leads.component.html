@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-lg-4 col-md-2">
+            <h4>Leads</h4>
+        </div>
+        <div class="col-lg-4 col-md-5 text-end">
+                <div class="form-group">
+                    <input type="text" class="icon-rtl form-control">
+                </div>
+        </div>
+        <div class="col-lg-4 col-md-5">
+            <button class="btn text-white topbtn" style="background-color: red;">+ Add New</button>&nbsp;
+            <button class="btn text-white topbtn" style="background-color: red;">Assign to Admin</button>
+        </div>
+    </div>
+    <div class="row mt-5 table-responsive customersTable">
+        <table class="table text-center">
+            <thead class="thead">
+              <tr>
+                <th scope="col">
+                    <input type="checkbox">
+                </th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Lead ID</th>
+                <th scope="col">Location</th>
+                <th scope="col">Event Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let customer of customers; let i=index">
+                <th scope="row"><input type="checkbox"></th>
+                <td>{{customer.name}}</td>
+                <td style="color: red;">{{customer.id}}</td>
+                <td>{{customer.location}}</td>
+                <td>{{customer.date}}</td>
+                <td ngClass="{'green-class': (customer.status == 'Assigned TO SP'), 'orange-class': (customer.status == 'Pipeline'), 'blue-class': (customer.status == 'New')">{{customer.status}}</td>
+                <td>
+                    <button class="btn btn-sm" (click)="openPopup()"><i class="bi bi-eye"></i></button>&nbsp;
+                    <button class="btn btn-sm" (click)="openPopup()"><i class="bi bi-pencil"></i></button>&nbsp;
+                    <button class="btn btn-sm" (click)="openPopup()"><i class="bi bi-trash3"></i></button>&nbsp;
+                    <button class="btn btn-sm" (click)="openPopup()"><i class="bi bi-search"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <app-dashboard></app-dashboard>
+</div>
+
+
+<!-- Pop Up code -->
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex">
+          <h3 class="modal-title"></h3>
+          <button type="button" class="btn btn-danger btn-sm" (click)="closePopup()" title="Close"> X </button>
+        </div>
+        <div class="modal-body">
+            <h1>This is pop up</h1>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.icon-rtl {
+    padding-right: 25px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat right;
+    background-size: 20px;
+  }
+
+
+  input[type=checkbox] {
+    accent-color: red;
+  }
+
+  .green-class { color: green; }
+.blue-class { color: blue; }
+.orange-class { color: orange; }
+  
+  @media screen and (max-width:1024px) {
+    
+    h4{
+      padding-right: 10px;
+    }
+  }

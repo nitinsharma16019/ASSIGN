@@ -1,0 +1,182 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-2">
+            <h4>Project Tracking</h4>
+            <span>006676 | <span style="color: red;">Project Tracking</span></span>
+        </div>
+        <div class="col-lg-4 offset-4">
+            <div class="form-group">
+                <input type="text" class="icon-rtl form-control">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <button class="btn text-white" style="background-color: red;">+Add New</button>
+        </div>
+    </div>
+    <div class="row p-5 mt-5" style="border: 1px solid gray;">
+        <div class="col">
+            <div class="row">
+                <div class="col-lg-4">
+                <button class="btn btn-sm rounded-circle" style="background-color: rgb(181, 178, 178);"><i class="bi bi-plus-lg"></i></button>
+                &nbsp;&nbsp;<span>Client Information</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4">
+                <button class="btn btn-sm rounded-circle" style="background-color: rgb(181, 178, 178);"><i class="bi bi-plus-lg"></i></button>
+                &nbsp;&nbsp;<span>Event Information</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4">
+                <button class="btn btn-sm rounded-circle" style="background-color: rgb(181, 178, 178);"><i class="bi bi-plus-lg"></i></button>
+                &nbsp;&nbsp;<span>KMK Information</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4">
+                <button *ngIf="!showMinusBtn" [ngStyle]="{backgroundColor: btnColor}" class="btn btn-sm rounded-circle" (click)="onclickPlus()" data-bs-toggle="collapse" data-bs-target="#mainContent" aria-expanded="false" aria-controls="collapseExample"><i class="bi bi-plus-lg"></i></button>
+                <button *ngIf="showMinusBtn" [ngStyle]="{backgroundColor: btnColor}" class="btn btn-sm rounded-circle" (click)="onclickMinus()" data-bs-toggle="collapse" data-bs-target="#mainContent" aria-expanded="false" aria-controls="collapseExample" style="color: rgb(181, 178, 178);"><i class="bi bi-dash-lg"></i></button>
+                &nbsp;&nbsp;<span [ngStyle]="{color: textColor}">Budget Information</span>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="collapse" id="mainContent">
+                    <div class="card card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn btn-outline-danger top" (click)="onDecoration()" >Decoration</button>
+                            <button class="btn btn-outline-danger top">Food</button>
+                            <button class="btn btn-outline-danger top">VAS</button>
+                            <button class="btn btn-outline-danger top">Others</button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                            <ul *ngIf="showUl" class="list-unstyled p-3 d-flex">
+                                <li><a class="dropdown-item" href="JavaScript:void(0);" (click)="onulClick()">Decoration & props</a></li>
+                                <li><a class="dropdown-item" href="JavaScript:void(0);">Floral</a></li>
+                                <li><a class="dropdown-item" href="JavaScript:void(0);">Logistics</a></li>
+                                <li><a class="dropdown-item" href="JavaScript:void(0);">Conceptual Lighting</a></li>
+                                <li><a class="dropdown-item" href="JavaScript:void(0);">Sound</a></li>
+                              </ul>
+                        </div>
+                      </div>
+                      <hr>
+
+                      <div class="row mt-5 table-responsive projectForm" *ngIf="showForm">
+                        <div class="row">
+                            <div class="text-end">
+                            <button class="btn btn-danger">+ Add New</button>
+                        </div>
+                          </div>
+                        <form>
+                        <table class="table text-center">
+                            <thead class="thead">
+                              <tr>
+                                <th scope="col">
+                                   PArticulars
+                                </th>
+                                <th scope="col">UOM</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Rate</th>
+                                <th scope="col">Amount</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Main entry gate</td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                              </tr>
+                              <tr>
+                                <td>VIP Entry</td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                              </tr>
+                              <tr>
+                                <td>Passage</td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                              </tr>
+                              <tr>
+                                <td>VIP Passage</td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                              </tr>
+                              <tr>
+                                <td>Main Mandap</td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                              </tr>
+                              <tr>
+                                <td>Water body</td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                              </tr>
+                              <tr>
+                                <td>Lounge</td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                              </tr>
+                              <tr>
+                                <td>Thematic food</td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                              </tr>
+                              <tr>
+                                <td style="color: red;">Total</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="number"></td>
+                              </tr>
+                              <tr>
+                                <td style="color: red;">Grand Total</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="number"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="row">
+                            <div class="footer text-end">
+                                <button class="btn btn-light">Cancel</button>&nbsp;
+                                <button class="btn btn-danger">Save</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-lg-4">
+                    <button class="btn btn-sm rounded-circle" style="background-color: rgb(181, 178, 178);"><i class="bi bi-plus-lg"></i></button>
+                    &nbsp;&nbsp;<span>Gallery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
